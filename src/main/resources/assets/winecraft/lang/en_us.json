@@ -1,4 +1,6 @@
 {
-  "item.winecraft.em_bot": "Empty Bottle",
-  "item.winecraft.wine_bot" : "Wine Bottle"
+  "item.winecraft.em_bot": "Empty bottle",
+  "item.winecraft.wine_bot" : "Red wine bottle",
+  "item.winecraft.red_grape" : "Red grape",
+  "itemGroup.winecraftModTab" : "WineCraft"
 }
