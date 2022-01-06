@@ -2,6 +2,7 @@ package com.elbowa.winecraft;
 
 //TODO Quando inserirai i blocchi ricordati di fare i vari setting per la CreativeTab
 
+import com.elbowa.winecraft.block.ModBlocks;
 import com.elbowa.winecraft.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class WineCraft
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
