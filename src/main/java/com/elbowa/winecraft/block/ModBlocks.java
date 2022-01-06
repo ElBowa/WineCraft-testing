@@ -1,6 +1,7 @@
 package com.elbowa.winecraft.block;
 
 import com.elbowa.winecraft.WineCraft;
+import com.elbowa.winecraft.block.custom.GrapevineBlock;
 import com.elbowa.winecraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,6 +27,10 @@ public class ModBlocks {
             .explosionResistance(6f)
             .destroyTime(12f)
             .sound(SoundType.AMETHYST_CLUSTER)));
+
+    public static final RegistryObject<Block> GRAPEVINE = BLOCKS.register("grape_vine",
+            ()-> new GrapevineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

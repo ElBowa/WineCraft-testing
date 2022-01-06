@@ -1,14 +1,12 @@
 package com.elbowa.winecraft.item;
 
 import com.elbowa.winecraft.WineCraft;
+import com.elbowa.winecraft.block.ModBlocks;
 import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,7 +27,7 @@ public static final RegistryObject<Item> EM_BOT = ITEMS.register("em_bot",
 
 //Registra il grappolo d'uva rossa
 public static final RegistryObject<Item> RED_GRAPE = ITEMS.register("red_grape",
-        ()-> new Item((new Item.Properties()
+        ()-> new ItemNameBlockItem(ModBlocks.GRAPEVINE.get(),new Item.Properties()
         .tab(ModCreativeModeTab.WINECRAFT_TAB)
         .stacksTo(64)
         .rarity(Rarity.COMMON)
@@ -37,7 +35,7 @@ public static final RegistryObject<Item> RED_GRAPE = ITEMS.register("red_grape",
                 .nutrition(1)
                 .saturationMod(0.5f)
                 .fast()
-                .build()))));
+                .build())));
 
 //Registra la bottiglia di vino rosso
 public static final RegistryObject<Item> WINE_BOT = ITEMS.register("wine_bot",

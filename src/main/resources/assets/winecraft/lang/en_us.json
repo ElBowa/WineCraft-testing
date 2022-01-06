@@ -1,6 +1,9 @@
 {
-  "item.winecraft.em_bot": "Empty bottle",
-  "item.winecraft.wine_bot" : "Red wine bottle",
-  "item.winecraft.red_grape" : "Red grape",
-  "itemGroup.winecraftModTab" : "WineCraft"
+  "item.winecraft.em_bot": "Empty Bottle",
+  "item.winecraft.wine_bot" : "Red Wine Bottle",
+  "item.winecraft.red_grape" : "Red Grape",
+
+  "itemGroup.winecraftModTab" : "WineCraft",
+
+  "block.winecraft.build_brick" : "Builder's Bricks"
 }
