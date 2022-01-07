@@ -1,9 +1,9 @@
 package com.elbowa.winecraft;
 
-//TODO Quando inserirai i blocchi ricordati di fare i vari setting per la CreativeTab
-
 import com.elbowa.winecraft.block.ModBlocks;
 import com.elbowa.winecraft.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,7 +35,13 @@ public class WineCraft
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
+    private void setup(final FMLCommonSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAPEVINE.get(), RenderType.cutout());
+
+
+    }
+
+
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
