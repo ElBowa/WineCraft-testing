@@ -2,7 +2,7 @@
   "variants": {
     "half=lower": {
       "age=0": {
-        "model" : "winecraft:block/low_grapevine0"
+        "model": "winecraft:block/low_grapevine0"
       },
       "age=1": {
         "model": "winecraft:block/low_grapevine1"

@@ -2,15 +2,14 @@ package com.elbowa.winecraft.block;
 
 import com.elbowa.winecraft.WineCraft;
 import com.elbowa.winecraft.block.custom.GrapevineBlock;
+import com.elbowa.winecraft.item.ModCreativeModeTab;
 import com.elbowa.winecraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,10 +27,12 @@ public class ModBlocks {
             .destroyTime(12f)
             .sound(SoundType.AMETHYST_CLUSTER)));
 
+    //La vite
     public static final RegistryObject<Block> GRAPEVINE = BLOCKS.register("grape_vine",
-            ()-> new GrapevineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+            ()-> new GrapevineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
+            .sound(SoundType.SWEET_BERRY_BUSH).jumpFactor(0).instabreak()));
 
-
+    // i Register
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         RegistryBlockItem(name, toReturn);
@@ -40,7 +41,7 @@ public class ModBlocks {
 
     private static <T extends Block> void RegistryBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(),
-                new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+                new Item.Properties().tab(ModCreativeModeTab.WINECRAFT_TAB)));
     }
 
     public static void register(IEventBus eventBus) {

@@ -7,7 +7,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab WINECRAFT_TAB = new CreativeModeTab("winecraftModTab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.WINE_BOT.get());
+            return new ItemStack(ModItems.RED_GRAPE.get());
         }
     };
 }
