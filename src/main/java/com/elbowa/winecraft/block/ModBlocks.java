@@ -9,7 +9,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,10 +26,15 @@ public class ModBlocks {
             .destroyTime(12f)
             .sound(SoundType.AMETHYST_CLUSTER)));
 
+
+
     //La vite
     public static final RegistryObject<Block> GRAPEVINE = BLOCKS.register("grape_vine",
             ()-> new GrapevineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
-            .sound(SoundType.SWEET_BERRY_BUSH).jumpFactor(0).instabreak()));
+            .sound(SoundType.SWEET_BERRY_BUSH).jumpFactor((float) 0.6).instabreak()));
+
+
+
 
     // i Register
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
