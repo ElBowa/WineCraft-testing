@@ -1,6 +1,7 @@
 package com.elbowa.winecraft.block;
 
 import com.elbowa.winecraft.WineCraft;
+//import com.elbowa.winecraft.block.custom.GrapevineBlock;
 import com.elbowa.winecraft.block.custom.GrapevineBlock;
 import com.elbowa.winecraft.item.ModCreativeModeTab;
 import com.elbowa.winecraft.item.ModItems;
@@ -29,11 +30,14 @@ public class ModBlocks {
 
 
     //La vite
-    public static final RegistryObject<Block> GRAPEVINE = BLOCKS.register("grape_vine",
+    public static final RegistryObject<Block>  GRAPEVINE= BLOCKS.register("grapevine",
             ()-> new GrapevineBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
             .sound(SoundType.SWEET_BERRY_BUSH).jumpFactor((float) 0.6).instabreak()));
 
-
+    public static final RegistryObject<Block> GLASSBOT= BLOCKS.register("glassbot",
+            ()-> new Block(BlockBehaviour.Properties.of(Material.GLASS)
+                    .destroyTime(1f)
+                    .sound(SoundType.GLASS)));
 
 
     // i Register

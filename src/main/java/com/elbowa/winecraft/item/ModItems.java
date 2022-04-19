@@ -27,7 +27,7 @@ public static final RegistryObject<Item> EM_BOT = ITEMS.register("em_bot",
 
 //Registra il grappolo d'uva rossa
 public static final RegistryObject<Item> RED_GRAPE = ITEMS.register("red_grape",
-        ()-> new ItemNameBlockItem(ModBlocks.GRAPEVINE.get(),new Item.Properties()
+    ()-> new ItemNameBlockItem(ModBlocks.GRAPEVINE.get(),new Item.Properties()
         .tab(ModCreativeModeTab.WINECRAFT_TAB)
         .stacksTo(64)
         .rarity(Rarity.COMMON)
@@ -36,6 +36,11 @@ public static final RegistryObject<Item> RED_GRAPE = ITEMS.register("red_grape",
                 .saturationMod(0.5f)
                 .fast()
                 .build())));
+
+
+public static final RegistryObject<Item> GLASSBOT = ITEMS.register("glassbot",
+        ()-> new ItemNameBlockItem(ModBlocks.GLASSBOT.get(), new Item.Properties()
+        .stacksTo(4).tab(ModCreativeModeTab.WINECRAFT_TAB)));
 
 //Registra la bottiglia di vino rosso
 public static final RegistryObject<Item> WINE_BOT = ITEMS.register("wine_bot",

@@ -37,8 +37,8 @@ public class WineCraft
     }
 
     private void setupClient(final FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAPEVINE.get(), RenderType.cutout());
-    }
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAPEVINE.get(), RenderType.cutout());
+    ItemBlockRenderTypes.setRenderLayer(ModBlocks.GLASSBOT.get(), RenderType.cutout());}
 
 
     private void setup(final FMLCommonSetupEvent event) {
